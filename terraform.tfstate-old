@@ -1,0 +1,350 @@
+{
+  "version": 4,
+  "terraform_version": "1.3.4",
+  "serial": 27,
+  "lineage": "51ffbe62-56e9-f87d-253d-0985d1247450",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "azurerm_network_interface",
+      "name": "nicvm",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "applied_dns_servers": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "enable_accelerated_networking": false,
+            "enable_ip_forwarding": false,
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-prd-servers-rg001/providers/Microsoft.Network/networkInterfaces/gsiazvm01-nic",
+            "internal_dns_name_label": "",
+            "internal_domain_name_suffix": "r2rdxvaaucnu5he5ljwqe5hxte.fx.internal.cloudapp.net",
+            "ip_configuration": [
+              {
+                "gateway_load_balancer_frontend_ip_configuration_id": "",
+                "name": "ipconfig1",
+                "primary": true,
+                "private_ip_address": "172.10.0.4",
+                "private_ip_address_allocation": "Dynamic",
+                "private_ip_address_version": "IPv4",
+                "public_ip_address_id": "",
+                "subnet_id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001/providers/Microsoft.Network/virtualNetworks/gsi-ne-srv-vnet001/subnets/gsi-ne-srv-snet001"
+              }
+            ],
+            "location": "northeurope",
+            "mac_address": "",
+            "name": "gsiazvm01-nic",
+            "private_ip_address": "172.10.0.4",
+            "private_ip_addresses": [
+              "172.10.0.4"
+            ],
+            "resource_group_name": "gsi-ne-prd-servers-rg001",
+            "tags": {
+              "company": "GSI",
+              "environment": "prd",
+              "project": "epharma"
+            },
+            "timeouts": null,
+            "virtual_machine_id": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rgsrvname",
+            "azurerm_resource_group.rgvnetname",
+            "azurerm_subnet.snetname",
+            "azurerm_virtual_network.vnetname"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rgsrvname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-prd-servers-rg001",
+            "location": "northeurope",
+            "name": "gsi-ne-prd-servers-rg001",
+            "tags": {
+              "environment": "prd",
+              "project": "epharma"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rgvnetname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001",
+            "location": "northeurope",
+            "name": "gsi-ne-shared-netsec-rg001",
+            "tags": {
+              "environment": "shared",
+              "project": "epharma"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_subnet",
+      "name": "snethubname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_prefixes": [
+              "172.20.0.0/27"
+            ],
+            "delegation": [],
+            "enforce_private_link_endpoint_network_policies": false,
+            "enforce_private_link_service_network_policies": false,
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001/providers/Microsoft.Network/virtualNetworks/gsi-ne-hub-vnet001/subnets/gsi-ne-hub-snet001",
+            "name": "gsi-ne-hub-snet001",
+            "resource_group_name": "gsi-ne-shared-netsec-rg001",
+            "service_endpoint_policy_ids": null,
+            "service_endpoints": null,
+            "timeouts": null,
+            "virtual_network_name": "gsi-ne-hub-vnet001"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rgvnetname",
+            "azurerm_virtual_network.vnethubname"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_subnet",
+      "name": "snetname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_prefixes": [
+              "172.10.0.0/26"
+            ],
+            "delegation": [],
+            "enforce_private_link_endpoint_network_policies": false,
+            "enforce_private_link_service_network_policies": false,
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001/providers/Microsoft.Network/virtualNetworks/gsi-ne-srv-vnet001/subnets/gsi-ne-srv-snet001",
+            "name": "gsi-ne-srv-snet001",
+            "resource_group_name": "gsi-ne-shared-netsec-rg001",
+            "service_endpoint_policy_ids": null,
+            "service_endpoints": null,
+            "timeouts": null,
+            "virtual_network_name": "gsi-ne-srv-vnet001"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rgvnetname",
+            "azurerm_virtual_network.vnetname"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "vnethubname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "172.20.0.0/24"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "flow_timeout_in_minutes": 0,
+            "guid": "8c49f327-ed84-428b-bc62-09495993236d",
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001/providers/Microsoft.Network/virtualNetworks/gsi-ne-hub-vnet001",
+            "location": "northeurope",
+            "name": "gsi-ne-hub-vnet001",
+            "resource_group_name": "gsi-ne-shared-netsec-rg001",
+            "subnet": [],
+            "tags": {
+              "company": "GSI",
+              "environment": "shared",
+              "project": "epharma"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rgvnetname"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_virtual_network",
+      "name": "vnetname",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address_space": [
+              "172.10.0.0/24"
+            ],
+            "bgp_community": "",
+            "ddos_protection_plan": [],
+            "dns_servers": [],
+            "edge_zone": "",
+            "flow_timeout_in_minutes": 0,
+            "guid": "d43b228f-a000-4f9b-9c9f-5a6d027cf79c",
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-shared-netsec-rg001/providers/Microsoft.Network/virtualNetworks/gsi-ne-srv-vnet001",
+            "location": "northeurope",
+            "name": "gsi-ne-srv-vnet001",
+            "resource_group_name": "gsi-ne-shared-netsec-rg001",
+            "subnet": [],
+            "tags": {
+              "company": "GSI",
+              "environment": "shared",
+              "project": "epharma"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rgvnetname"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_windows_virtual_machine",
+      "name": "vmgsi",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "additional_capabilities": [],
+            "additional_unattend_content": [],
+            "admin_password": "LIS@gsi#2099mm",
+            "admin_username": "admingsirobo",
+            "allow_extension_operations": true,
+            "availability_set_id": "",
+            "boot_diagnostics": [],
+            "computer_name": "gsiazvm01",
+            "custom_data": null,
+            "dedicated_host_group_id": "",
+            "dedicated_host_id": "",
+            "edge_zone": "",
+            "enable_automatic_updates": true,
+            "encryption_at_host_enabled": false,
+            "eviction_policy": "",
+            "extensions_time_budget": "PT1H30M",
+            "hotpatching_enabled": false,
+            "id": "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-prd-servers-rg001/providers/Microsoft.Compute/virtualMachines/gsiazvm01",
+            "identity": [],
+            "license_type": "",
+            "location": "northeurope",
+            "max_bid_price": -1,
+            "name": "gsiazvm01",
+            "network_interface_ids": [
+              "/subscriptions/e4d87d33-cba1-4c8a-9dcb-4de88cd3bace/resourceGroups/gsi-ne-prd-servers-rg001/providers/Microsoft.Network/networkInterfaces/gsiazvm01-nic"
+            ],
+            "os_disk": [
+              {
+                "caching": "ReadWrite",
+                "diff_disk_settings": [],
+                "disk_encryption_set_id": "",
+                "disk_size_gb": 127,
+                "name": "gsiazvm01-OSdisk",
+                "storage_account_type": "StandardSSD_LRS",
+                "write_accelerator_enabled": false
+              }
+            ],
+            "patch_mode": "AutomaticByOS",
+            "plan": [],
+            "platform_fault_domain": -1,
+            "priority": "Regular",
+            "private_ip_address": "172.10.0.4",
+            "private_ip_addresses": [
+              "172.10.0.4"
+            ],
+            "provision_vm_agent": true,
+            "proximity_placement_group_id": "",
+            "public_ip_address": "",
+            "public_ip_addresses": [],
+            "resource_group_name": "gsi-ne-prd-servers-rg001",
+            "secret": [],
+            "secure_boot_enabled": false,
+            "size": "Standard_B8ms",
+            "source_image_id": "",
+            "source_image_reference": [
+              {
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "sku": "2022-Datacenter",
+                "version": "latest"
+              }
+            ],
+            "tags": {
+              "company": "GSI",
+              "environment": "prd",
+              "project": "epharma"
+            },
+            "termination_notification": null,
+            "timeouts": null,
+            "timezone": "",
+            "user_data": "",
+            "virtual_machine_id": "317a4d52-e3dd-474b-9e9d-64c48cd6b760",
+            "virtual_machine_scale_set_id": "",
+            "vtpm_enabled": false,
+            "winrm_listener": [],
+            "zone": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNzAwMDAwMDAwMDAwLCJkZWxldGUiOjI3MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoyNzAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_network_interface.nicvm",
+            "azurerm_resource_group.rgsrvname",
+            "azurerm_resource_group.rgvnetname",
+            "azurerm_subnet.snetname",
+            "azurerm_virtual_network.vnetname"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
